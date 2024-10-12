@@ -202,12 +202,11 @@ const ObtenerCodigoUnicoDelDisco = ()=> {
         if( codigoUnico !== null) {
             codigoUnico = codigoUnico.trim();
             codigoUnico = parseInt(codigoUnico);
-            if (isNaN(codigoUnico) || codigoUnico < 1 || codigoUnico > 999) {
-                if (isNaN(codigoUnico)) {
-                    alert("El código numérico único debe ser un número.");
-                } else {
-                    alert("El código numérico único debe estar entre 1 y 999.");
-                }
+            if (isNaN(codigoUnico) ) 
+            {
+                alert("El código numérico único debe ser un número.");
+            } else if( codigoUnico < 1 || codigoUnico > 999) {
+                alert("El código numérico único debe estar entre 1 y 999.");
             } else if (discos.some(disco => disco.codigo === parseInt(codigoUnico) )) {
                 alert("El código numérico único ya ha sido utilizado. Ingrese otro código.");
             }
@@ -236,10 +235,16 @@ const ObtenerDuracionPista = () => {
             duracionPista = duracionPista.trim();
             duracionPista = parseInt(duracionPista);
         }
-            
-        if (isNaN(duracionPista) || duracionPista < 0 || duracionPista > 7200) {
+        
+        if (isNaN(duracionPista) ) 
+        {
+            alert("El código numérico único debe ser un número.");
+        } 
+        else if( duracionPista < 0 || duracionPista > 7200 ) 
+        {
             alert("La duración de la pista debe ser un número entre 0 y 7200 segundos.");
         }
+        
     } while (isNaN(duracionPista) || duracionPista < 0 || duracionPista > 7200);
     return duracionPista;
 }
