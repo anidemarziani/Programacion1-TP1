@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <title>Programación I | Parcial 1 | DEMARZIANI, ANA | GAMERO, GUSTAVO</title>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="estilos.css"/>
+</head>
+<body>
+    <header>
+        <h1>Programación I | Parcial 1 | DEMARZIANI, ANA | GAMERO, GUSTAVO</h1>
+    </header>
+    <main>
+        <section class="container">
+            <h2>Mis discos</h2>
+            <div class="buttons">
+                <button onclick="cargarNuevoDisco();">Cargar nuevo disco</button>
+                <button onclick="mostrarDiscos();">Mostrar discos</button>
+                <button onclick="BuscarPorCodigo();">Buscar por código</button>
+            </div>
+            <div id="totalRecopilado"></div>
+        </section>
+        <section id="info"></section>
+        <section class="notFound hide" id="discosNoEncontrados">
+            <picture>
+                <source srcset="/assets/NotFoundMobile.jpg" media="(max-width:576px)">
+                <source srcset="/assets/NotFoundTablet.jpg" media="(min-width:577px) and (max-width:991px)">
+                <img src="/assets/NotFoundWeb.jpg" alt="Imagen de No se encontraron resultados" title="Imagen de No se encontraron resultados">
+            </picture>
+            <h3>Opps...No se encontraron resultados</h3>
+            <p>Revisá el codigo ingresado o realizá nuevamante otra búsqueda</p>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li>Profesor Corbalan Cristian Ariel</li>
+            <li>
+                <a
+                href="mailto:cristian.corbalan@davinci.edu.ar?subject=P1%20-%20Consulta%20-%20DWT2AV%20-%20Apellido,%20Nombre"
+                target="_blank">cristian.corbalan@davinci.edu.ar</a>
+            </li>
+            <li>Programación 1</li>
+        </ul>
+    </footer>
+<script src="parcial.js"></script>
+</body>
+</html>
