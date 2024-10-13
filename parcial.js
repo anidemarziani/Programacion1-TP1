@@ -1,4 +1,9 @@
 'use strict';
+
+/*
+ * DEMARZIANI, ANA | GAMERO, GUSTAVO
+*/
+
 let discos = [];
 
 // Función Cargar:
@@ -109,7 +114,7 @@ const BuscarPorCodigo = () => {
     if(codigoBuscado !== null )
     {
         
-        document.getElementById("totalRecopilado").innerHTML  = `<div><p>Resultados de búsqueda: ${codigoBuscado}</p></div> `;
+        document.getElementById("totalRecopilado").innerHTML  = `<div><p>Resultados de búsqueda para el código "${codigoBuscado}":</p></div> `;
         const discoEncontrado = discos.find(disco => disco.codigo === codigoBuscado);
 
         if (discoEncontrado) {
