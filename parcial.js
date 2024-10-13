@@ -88,7 +88,6 @@ const mostrarDiscos = () => {
 // Función Buscar por codigo:
 const BuscarPorCodigo = () => {
     
-    document.getElementById("totalRecopilado").innerHTML  = "";
     
 
     let codigoBuscado;
@@ -103,6 +102,7 @@ const BuscarPorCodigo = () => {
                     alert("El código numérico único debe estar entre 1 y 999.");
                 }
             }
+            document.getElementById("totalRecopilado").innerHTML  = "";
         }
     } while ( codigoBuscado !== null && ( isNaN(codigoBuscado) || codigoBuscado < 1 || codigoBuscado > 999 ) ) ;
     
